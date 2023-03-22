@@ -1,0 +1,1 @@
+web gunicorn DigitalMarketingProject.wsgi:application --log-file -
