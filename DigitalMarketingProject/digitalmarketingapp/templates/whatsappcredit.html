@@ -8,9 +8,20 @@
   <title>Document</title>
 </head>
 <style>
+
+  body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbsfJzKQiooiNyhKljvogyVMarjXiQNxAgpQ&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+
+
+
   .container1 {
-    width: 30%;
-    height: 400px;
+    width: 40%;
+    height: 500px;
     border: 1px solid #ccc;
     display: flex;
   }
@@ -234,24 +245,24 @@
 
     <div class="container1">
       <div class="quick-links">
-        <h3>Quick Links</h3>
+        <button style="background-color:#9b59b6;border:#9b59b6"><h3>Quick Links</h3></button>
         <hr>
         <div class="quick-links-header">
-          <h4>Dashboard</h4>
+          <button style="background-color:green;border:#9b59b6"><h4 >Dashboard</h4></button>
           <button class="toggle-button">-</button>
         </div>
         <ul class="quick-links-list">
-          <li><a href="#">WhatsApp User Report</a></li>
-          <li><a href="#">SMS User Report</a></li>
-          <li><a href="#">Voice User Report</a></li>
-          <li><a href="{% url 'home' %}" onclick="swapContent()">Create New User</a></li>
-          <li><a href="{% url 'whatsappcredit' %}" onclick="swapContent()">Topup WhatsApp Balance</a></li>
-          <li><a href="#">Topup SMS Promotional</a></li>
-          <li><a href="#">Topup SMS Transactional</a></li>
-          <li><a href="#">Topup Voice Balance</a></li>
-          <li><a href="{% url 'passwordreset' %}">Change admin Password</a></li>
-          <li><a href="{% url 'iframe' %}">IFrame with I-Dialer</a></li>
-          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li><button style=""><a href="#" style="text-decoration: none;">WhatsApp User Report</a></button></li>
+          <li><button><a href="#" style="text-decoration: none;">SMS User Report</a></button></li>
+          <li><button><a href="#" style="text-decoration: none;">Voice User Report</a></button></li>
+          <li><button><a href="{% url 'home' %}" onclick="swapContent()" style="text-decoration: none;">Create New User</a></button></li>
+          <li><button><a href="{% url 'whatsappcredit' %}" onclick="swapContent()" style="text-decoration: none;">Topup WhatsApp Balance</a></button></li>
+          <li><button><a href="#" style="text-decoration: none;">Topup SMS Promotional</a></button></li>
+          <li><button><a href="#" style="text-decoration: none;">Topup SMS Transactional</a></button></li>
+          <li><button><a href="#" style="text-decoration: none;">Topup Voice Balance</a></button></li>
+          <li><button><a href="{% url 'passwordreset' %}" style="text-decoration: none;">Change admin Password</a></button></li>
+          <li><button><a href="{% url 'iframe' %}" style="text-decoration: none;">IFrame with I-Dialer</a></button></li>
+          <li><button><a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a></button></li>
         </ul>
       </div>
     </div>
@@ -314,7 +325,7 @@
 
     <div class="whatsapp-container" style="width:80%;margin-right:300px;color:green;" id="whatsappid">
       <div style="color:green">
-        <h3 style="text-align:left">WhatsApp Balance Credit Center</h3>
+        <h3 style="text-align:left; color:blue">WhatsApp Balance Credit Center</h3>
       </div>
       <hr>
       <div class="shadow p-3 mb-5 bg-blue rounded">
