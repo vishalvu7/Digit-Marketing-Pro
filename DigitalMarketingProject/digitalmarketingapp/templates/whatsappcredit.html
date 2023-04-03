@@ -21,7 +21,7 @@
 
   .container1 {
     width: 40%;
-    height: 500px;
+    height: 550px;
     border: 1px solid #ccc;
     display: flex;
   }
@@ -226,6 +226,11 @@
       flex-direction: column;
     }
   }
+  button{
+    background-color: ghostwhite;
+    width:200px;
+    height:30px;
+  }
 </style>
 <script type="text/javascript">
   window.history.forward();
@@ -245,14 +250,14 @@
 
     <div class="container1">
       <div class="quick-links">
-        <button style="background-color:#9b59b6;border:#9b59b6"><h3>Quick Links</h3></button>
+        <button style="background-color:#fff0;border:#9b59b6"><h3>Quick Links</h3></button>
         <hr>
         <div class="quick-links-header">
-          <button style="background-color:green;border:#9b59b6"><h4 >Dashboard</h4></button>
+          <button style="background-color:#fff0;border:#9b59b6;margin-bottom: 20px;"><h4 >Dashboard</h4></button>
           <button class="toggle-button">-</button>
         </div>
         <ul class="quick-links-list">
-          <li><button style=""><a href="#" style="text-decoration: none;">WhatsApp User Report</a></button></li>
+          <li><button ><a href="#" style="text-decoration: none;">WhatsApp User Report</a></button></li>
           <li><button><a href="#" style="text-decoration: none;">SMS User Report</a></button></li>
           <li><button><a href="#" style="text-decoration: none;">Voice User Report</a></button></li>
           <li><button><a href="{% url 'home' %}" onclick="swapContent()" style="text-decoration: none;">Create New User</a></button></li>
@@ -325,7 +330,7 @@
 
     <div class="whatsapp-container" style="width:80%;margin-right:300px;color:green;" id="whatsappid">
       <div style="color:green">
-        <h3 style="text-align:left; color:blue">WhatsApp Balance Credit Center</h3>
+        <h3 style="text-align:left; color:#71b7e6">WhatsApp Balance Credit Center</h3>
       </div>
       <hr>
       <div class="shadow p-3 mb-5 bg-blue rounded">
@@ -333,18 +338,26 @@
         <div style="width:30%;color:green;height: 400px;">
           <form action="/whatsappcredit" style="width:30%" method="post">
           {% csrf_token %}
-          <select name="email" id="email" style="width:170px;">
+          <select name="email" id="email" style="width:170px;width: 303px;
+          height: 35px;">
             {% for user in users %}
             <option value="{{ user }}">{{ user }}</option>
             {% endfor %}
           </select>
-          <input type="text" name="whatsappcredits" placeholder="Enter WhatsApp Credits" id="" style="margin-top:15px;">
+          <input type="text" name="whatsappcredits" placeholder="Enter WhatsApp Credits" id="" style="margin-top: 15px;
+          width: 170px;
+          height: 35px;">
           <br><br>
           <input type="submit" value="Add WhatsApp Credits" id="myButton" style="background-color:#71b7e6;width: 180px;height:30px;border:1px
           solid white;color:white">
         </form>
         {% if msg %}
-        <h3>{{ msg }}</h3>
+        <p>{{ msg }}</p>
+
+        <form action="/whatsappcredit" style="width:30%" method="get">
+          <button type="submit" style="background-color:white">Refresh</button>
+        </form>
+        
         {% endif %}
       </div>
       </div>
@@ -361,10 +374,10 @@
 <script>
 
     
-        document.getElementById("myButton").addEventListener("click", function(){
+        <!-- document.getElementById("myButton").addEventListener("click", function(){
           // code to show popup window here
           alert("Your balance is credited...");
-        });
+        }); -->
       
   const toggleButton = document.querySelector('.toggle-button');
   const quickLinksList = document.querySelector('.quick-links-list');

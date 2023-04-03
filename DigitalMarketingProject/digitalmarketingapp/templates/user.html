@@ -75,8 +75,8 @@
           }
           
           button {
-            background-color: #00bfff;
-            color: white;
+            background-color: white;
+            color: yellowgreen;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -140,7 +140,11 @@
       <div style="width:100% ; display:flex;justify-content:center">
         <form action="{% url 'logout' %}" method="post" >
             {% csrf_token %}
-            <input type="submit" value="Logout" style="background-color:#00bfff;border: 1px solid grey;border-radius:5px;width:80px">
+            <input type="submit" value="Logout" style="background-color: #00bfff;
+            border: 1px solid grey;
+            border-radius: 5px;
+            width: 158px;
+            height: 30px;">
         </form>
       </div>
       

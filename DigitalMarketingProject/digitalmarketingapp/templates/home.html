@@ -20,13 +20,14 @@
 
   .container1 {
     width: 20%;
-    height: 500px;
+    height: 550px;
     border: 1px solid #ccc;
     display: flex;
   }
 
   .quick-links {
     width: 80%;
+    
 
     padding: 10px;
   }
@@ -223,6 +224,12 @@
     .container .content .category {
       flex-direction: column;
     }
+
+  }
+
+  button{
+    background-color: ghostwhite;
+   
   }
 </style>
 <script type="text/javascript">
@@ -230,6 +237,7 @@
   function noBack() {
       window.history.forward();
   }
+
 </script>
 
 <body>
@@ -243,24 +251,24 @@
 
     <div class="container1">
       <div class="quick-links">
-        <button  style="background-color:#9b59b6;border:#9b59b6"><h3 style="color:wheat" >Quick Links</h3></button>
+        <button  style="background-color:#fff0;border:#fff0"><h3 style="color:#000" >Quick Links</h3></button>
         <hr>
         <div class="quick-links-header">
-          <button style="background-color:green;border:#9b59b6"><h4 style="color:wheat">Dashboard</h4></button>
+          <button style="background-color:#fff0;border:#9b59b6"><h4 style="color:#000">Dashboard</h4></button>
           <button class="toggle-button">-</button>
         </div>
         <ul class="quick-links-list">
-          <li><button><a href="#" style="text-decoration: none;">WhatsApp User Report</a></button></li>
-          <li><button><a href="#" style="text-decoration: none;">SMS User Report</a></button></li>
-          <li><button><a href="#" style="text-decoration: none;">Voice User Report</a></button></li>
-          <li><button><a href="{% url 'home' %}" onclick="swapContent()" style="text-decoration: none;">Create New User</a></button></li>
-          <li><button><a href="{% url 'whatsappcredit' %}" onclick="swapContent()" style="text-decoration: none;">Topup WhatsApp Balance</a></button></li>
-          <li><button><a href="#" style="text-decoration: none;">Topup SMS Promotional</a></button></li>
-          <li><button><a href="#" style="text-decoration: none;">Topup SMS Transactional</a></button></li>
-          <li><button><a href="#" style="text-decoration: none;">Topup Voice Balance</a></button></li>
-          <li><button><a href="{% url 'passwordreset' %}" style="text-decoration: none;">Change admin Password</a></button></li>
-          <li><button><a href="{% url 'iframe' %}" style="text-decoration: none;">IFrame with I-Dialer</a></button></li>
-          <li><button><a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">WhatsApp User Report</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">SMS User Report</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">Voice User Report</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="{% url 'home' %}" onclick="swapContent()" style="text-decoration: none;">Create New User</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="{% url 'whatsappcredit' %}" onclick="swapContent()" style="text-decoration: none;">Topup WhatsApp Balance</a> </button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">Topup SMS Promotional</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">Topup SMS Transactional</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="#" style="text-decoration: none;">Topup Voice Balance</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="{% url 'passwordreset' %}" style="text-decoration: none;">Change admin Password</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="{% url 'iframe' %}" style="text-decoration: none;">IFrame with I-Dialer</a></button></li>
+          <li><button style="width:200px;height:30px"><a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a></button></li>
         </ul>
       </div>
     </div>
@@ -270,7 +278,7 @@
 
         <div class="title">Registration</div>
         {% if msg %}
-        <div>{{msg}}</div>
+        <div style="text-align:center;color: blue;">{{msg}}</div>
         {% endif %}
         <hr>
         <div class="content">
